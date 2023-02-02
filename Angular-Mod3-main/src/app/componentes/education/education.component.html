@@ -1,0 +1,71 @@
+<!-- EDUCACION -->
+
+<div class="card" style="margin-top: 20px;" id="educacion">
+
+  
+
+  <h3 class="card-title text-center"  style="margin-top: 20px;margin-bottom: 20px;">Educación</h3>  
+
+  
+    <div class="col-lg-2" style="margin-left: 15px;margin-bottom: 5px;">
+      <button type="button" class="btn btn-primary" routerLink="/nuevaedu" *ngIf="isLogged">
+          Agregar educacion
+      </button>
+    </div>
+
+    <div card-body border-bottom border-primary>
+      <div *ngFor="let Educacion of edu"  class="card-body border-top border-primary">
+        
+        <div class="d-flex justify-content-between">
+          <h5 class="card-subtitle mb-2 text-muted">{{Educacion.institucionE}}</h5> 
+          <div> 
+            <button *ngIf="isLogged" class="btn btn-primary" routerLink="/editedu/{{Educacion.id}}" style="margin-right: 5px;">
+              <i class="bi bi-pencil-fill"></i>
+            </button>
+            <button *ngIf="isLogged" class="btn btn-danger" (click)="delete(Educacion.id)">
+              <i class="bi bi-x-square"></i>
+            </button>
+          </div>
+        </div>
+        <p class="card-text">{{Educacion.tituloE}}</p>
+        <p class="card-text">{{Educacion.inicioE}} - {{Educacion.finalE}} </p>
+      </div>
+    </div>
+  
+
+    
+</div> 
+
+<!-- <div class="card container-xxl" style="margin-top: 20px;" id="educacion">
+
+<div class="row">
+    <h3 class="card-title text-center"  style="margin-top: 20px;margin-bottom: 20px;">Educacion</h3>
+
+    <div class="col-lg-2">
+      <button type="button" class="btn btn-primary" routerLink="/nuevaedu" *ngIf="isLogged">
+          Agregar educacion
+      </button>
+    </div>
+    
+    <table class="table">
+      <tbody>
+        <tr *ngFor="let Educacion of edu">
+          <td>{{Educacion.institucionE}}</td>
+          <td>{{Educacion.tituloE}}</td>
+          <td>{{Educacion.inicioE}}</td>
+          <td>{{Educacion.finalE}}</td>
+          <td *ngIf="isLogged">
+            <button class="btn btn-primary" routerLink="/editedu/{{Educacion.id}}">
+              <i class="bi bi-pencil-fill" style="margin-right: 5px;"></i>
+            </button>
+          </td>
+          <td *ngIf="isLogged">
+            <button class="btn btn-danger" (click)="delete(Educacion.id)">
+              <i class="bi bi-x-square"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+</div> -->

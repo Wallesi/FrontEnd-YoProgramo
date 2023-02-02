@@ -1,0 +1,47 @@
+<div class="container" *ngIf="persona">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" action="">
+                <div class="form-group">
+                    <label for="finalE">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="persona.nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="institucionE">Apellido</label>
+                    <input type="text" class="form-control" id="apellido" name="apellido"  [(ngModel)]="persona.apellido" required>
+                </div>
+                <div class="form-group">
+                    <label for="finalE">Imagen perfil</label>
+                    <input type="file" class="form-control" id="img" name="img"  [(ngModel)]="persona.img" (change)="uploadImage()" accept=".png .jpg .jpeg">
+                </div>
+                <div class="form-group">
+                    <label for="tituloE">Banner</label>
+                    <input type="file" class="form-control" id="banner" name="banner"  [(ngModel)]="persona.banner" (change)="uploadImage()" accept=".png .jpg .jpeg">
+                </div>
+                <div class="form-group">
+                    <label for="inicioE">Curriculum</label>
+                    <input type="text" class="form-control" id="cv" name="cv"  [(ngModel)]="persona.cv" required>
+                </div>
+                <div class="form-group">
+                    <label for="finalE">Titulo</label>
+                    <input type="text" class="form-control" id="titulo" name="titulo"  [(ngModel)]="persona.titulo" required>
+                </div>
+                <div class="form-group">
+                    <label for="finalE">Sobre Mi</label>
+                    <input type="text" class="form-control" id="sobreMi" name="sobreMi"   [(ngModel)]="persona.sobreMi" required>
+                </div>
+                <div class="form-group">
+                    <label for="finalE">Email</label>
+                    <input type="text" class="form-control" id="email" name="email"   [(ngModel)]="persona.email" required>
+                </div>
+                <div class="form-group">
+                    <label for="finalE">Ubicacion</label>
+                    <input type="text" class="form-control" id="ubicacion" name="ubicacion"  [(ngModel)]="persona.ubicacion" required>
+                </div>
+                <button class="btn btn-success">
+                    Guardar
+                </button>
+            </form>
+        </div>
+    </div>
+</div> 

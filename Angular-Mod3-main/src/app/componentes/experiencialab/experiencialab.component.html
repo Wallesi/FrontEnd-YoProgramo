@@ -1,0 +1,36 @@
+<div class="card" style="margin-top: 20px;" id="educacion">
+
+  
+
+    <h3 class="card-title text-center"  style="margin-top: 20px;margin-bottom: 20px;">Experiencia laboral</h3>  
+  
+    
+      <div class="col-lg-2" style="margin-left: 15px;margin-bottom: 5px;">
+        <button type="button" class="btn btn-primary" routerLink="/nuevaexpe" *ngIf="isLogged" >
+            Agregar experiencia
+        </button>
+      </div>
+  
+      <div card-body border-bottom border-primary>
+        <div *ngFor="let Experiencia of expe" class="card-body border-top border-primary">
+          
+          <div class="d-flex justify-content-between">
+            <h5 class="card-subtitle mb-2 text-muted">{{Experiencia.puesto}}</h5> 
+            <div> 
+              <button *ngIf="isLogged" class="btn btn-primary"  style="margin-right: 5px;" routerLink="/editexpe/{{Experiencia.id}}">
+                <i class="bi bi-pencil-fill"></i>
+              </button>
+              <button *ngIf="isLogged"  class="btn btn-danger" (click)="delete(Experiencia.id)" >
+                <i class="bi bi-x-square"></i>
+              </button>
+            </div>
+          </div>
+          <p class="card-text">{{Experiencia.empresa}}</p>
+          <p class="card-text">{{Experiencia.comienzo}} - {{Experiencia.finalizo}}</p>
+          <p class="card-text">Trabajos desempeñados : {{Experiencia.tareas}} </p>
+        </div>
+      </div>
+    
+  
+      
+  </div> 

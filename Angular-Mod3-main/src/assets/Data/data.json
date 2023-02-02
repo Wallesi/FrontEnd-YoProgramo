@@ -1,0 +1,70 @@
+{
+    "portada":{
+        "name":"Mauro Waldemar Galizzi",
+        "position":"Full Stack Web Developer"
+    },
+    "aboutme":{
+        "title":"Estudiante Ing.Sistemas & Full Stack Web Developer",
+        "about":"Soy estudiante de Ing.Sistemas con interes en desarrollo web.",
+        "objetives":"Mis obejtivos son establecerme en una empresa y crecer en el area laboral, personal e intelectual.",
+        "ubication":"Santa Fé - Argentina",
+        "email":"waldemargalizzi98@gmail.com"
+    },
+    "educacion": [
+        {
+            "name":"Universitaria",
+            "title":"Ingenieria en Sistemas",
+            "beginning":"Marzo.2017"
+        },
+        {
+            "name":"CESSI e INTI",
+            "title":"Full Stack Web Developer",
+            "beginning":"Julio.2022 - Enero.2023"
+        },
+        {
+            "name":"Ministerio de Desarrollo Productivo y CESSI",
+            "title":"Fundamentos básicos de programación",
+            "beginning":"Febrero.2022 - Abril.2022"
+        },
+        {
+            "name":"EPNMyS N°35 Técnica Gral Don José de San Martín",
+            "title":"Bachiller en construcciones y Técnico. Maestro Mayor de Obras",
+            "beginning":"Marzo.2010 - Diciembre.2016"
+        }
+    ],
+
+    "proyectos": [
+
+        {   
+            "image":"./assets/img/portfolio1.png",
+            "title":"Cafe",
+            "text":"Una sencilla pagina echa como practica en html y puro css."
+        },
+        {   
+            "image":"./assets/img/portfolio2.png",
+            "title":"Portfolio v1",
+            "text":"Mi primer portfolio echo con html, css puro y algo de Js."
+        },
+        {
+            "image":"./assets/img/portfolio3.png",
+            "title":"Veterinaria",
+            "text":"Pagina de practica echa para una veterinaria."
+        },
+        {
+            "image":"./assets/img/portfolio4.png",
+            "title":"Pagina presentacion Athlete Squad",
+            "text":"Emprendimiento de rutinas para gym."
+        },
+        {
+            "image":"./assets/img/portfolio5.png",
+            "title":"Page - 4",
+            "text":"Pagina presentacion echa como practica en html,css y Js"
+        },
+        {   
+            "image":"./assets/img/portfolio6.png",
+            "title":"Portfolio v2",
+            "text":"Portafolio echo en su totalidad en bootstrap 5"
+        }
+
+    ]
+}
