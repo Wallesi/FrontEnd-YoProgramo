@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm" action="">
+                <div class="form-group">
+                    <label for="institucionE">Imagen Proyecto</label>
+                    <input type="file" class="form-control" id="img" name="img" [(ngModel)]="img" required (change)="uploadImage()" accept=".png .jpg .jpeg">
+                </div>
+                <div class="form-group">
+                    <label for="tituloE">Titulo</label>
+                    <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="titulo" required>
+                </div>
+                <div class="form-group">
+                    <label for="inicioE">Descripcion</label>
+                    <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="descripcion" required>
+                </div>
+                <div class="form-group">
+                    <label for="inicioE">Link pag web</label>
+                    <input type="text" class="form-control" id="web" name="web" [(ngModel)]="web" required>
+                </div>
+                <div class="form-group">
+                    <label for="inicioE">Link git</label>
+                    <input type="text" class="form-control" id="git" name="git" [(ngModel)]="git" required>
+                </div>
+                <button class="btn btn-success">
+                    Agregar
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

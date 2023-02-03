@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm" action="">
+                <div class="form-group">
+                    <label for="institucionE">Img habilidad</label>
+                    <input type="file" class="form-control" id="img" name="img" [(ngModel)]="img" required (change)="uploadImage()" accept=".png .jpg .jpeg">
+                </div>
+                <div class="form-group">
+                    <label for="tituloE">Nombre habilidad</label>
+                    <input type="text" class="form-control" id="name" name="name" [(ngModel)]="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="inicioE">Progreso</label>
+                    <input type="text" class="form-control" id="progreso" name="progreso" [(ngModel)]="progreso" required>
+                </div>
+                <button class="btn btn-success">
+                    Agregar
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

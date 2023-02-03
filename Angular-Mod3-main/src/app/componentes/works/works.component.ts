@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
-import { ComunicarService } from 'src/app/servicios/comunicar.service';
+import { Works } from 'src/app/model/works';
+import { WorksService } from 'src/app/servicios/works.service';
+import { TokenService } from 'src/app/servicios/token.service';
 
 @Component({
   selector: 'app-works',
@@ -8,18 +9,33 @@ import { ComunicarService } from 'src/app/servicios/comunicar.service';
   styleUrls: ['./works.component.css']
 })
 export class WorksComponent implements OnInit {
-  showPencilWorks: boolean = true;
-  miWorks:any;
-  constructor(private datosPorfolio:PortfolioService, public comunicarComponentes:ComunicarService) { }
+  works:Works[]=[];
+  isLogged=false; 
+
+  constructor(private sWorks:WorksService,private tokenService:TokenService) { }
 
   ngOnInit(): void {
-    this.datosPorfolio.obtenerDatos().subscribe(data=>{
-      this.miWorks=data.proyectos;
-    })
-    console.log('Estamos parados en la Works',this.comunicarComponentes.mostrarLapiz);
-    if(this.comunicarComponentes.mostrarLapiz===true){
-      this.showPencilWorks=true;
+    this.cargarWorks();
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    }
+    else{
+      this.isLogged = false;
     }
   }
   
+  cargarWorks():void{
+    this.sWorks.lista().subscribe(data=>{this.works=data})
+  }
+  delete(id:number){
+    if(id != undefined){
+      this.sWorks.delete(id).subscribe(
+        data => {
+          this.cargarWorks();
+        }, err => {
+          alert("No se pudo borrar la experiencia");
+        }
+      )
+    }
+  }
 }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ComunicarService } from 'src/app/servicios/comunicar.service';
+import { Skills } from 'src/app/model/skills';
+import { SkillsService } from 'src/app/servicios/skills.service';
+import { TokenService } from 'src/app/servicios/token.service';
 
 @Component({
   selector: 'app-skills',
@@ -7,17 +9,33 @@ import { ComunicarService } from 'src/app/servicios/comunicar.service';
   styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent implements OnInit {
-  showPencilSkils!:boolean;
+  skills:Skills[]=[];
+  isLogged=false;
 
-  constructor(public comunicarComponentes:ComunicarService) { }
+  constructor(private sSkills:SkillsService,private tokenService:TokenService) { }
 
   ngOnInit(): void {
+    this.cargarSkills();
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    }
+    else{
+      this.isLogged = false;
+    }
     
-    console.log('Estamos parados en la skills',this.comunicarComponentes.mostrarLapiz);
-    
-    if(this.comunicarComponentes.mostrarLapiz===true){
-      this.showPencilSkils = true;
+  }
+  cargarSkills():void{
+    this.sSkills.lista().subscribe(data=>{this.skills=data})
+  }
+  delete(id:number){
+    if(id != undefined){
+      this.sSkills.delete(id).subscribe(
+        data => {
+          this.cargarSkills();
+        }, err => {
+          alert("No se pudo borrar la experiencia");
+        }
+      )
     }
   }
-
 }

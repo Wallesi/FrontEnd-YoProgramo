@@ -8,6 +8,10 @@ import { EditEducacionComponent } from './componentes/education/edit/edit-educac
 import { NewexperienciaComponent } from './componentes/experiencialab/new/newexperiencia/newexperiencia.component';
 import { EditExperiencialabComponent } from './componentes/experiencialab/edit/edit-experiencialab/edit-experiencialab.component';
 import { EditarPotadaAboutComponent } from './componentes/portada/edit/editar-potada-about/editar-potada-about.component';
+import { NewSkillsComponent } from './componentes/skills/new/new-skills/new-skills.component';
+import { EditSkillsComponent } from './componentes/skills/edit/edit-skills/edit-skills.component';
+import { NewWorksComponent } from './componentes/works/new/new-works/new-works.component';
+import { EditWorksComponent } from './componentes/works/edit/edit-works/edit-works.component';
 
 const routes: Routes = [
   {path : '', redirectTo: 'home', pathMatch:'full'},
@@ -18,7 +22,11 @@ const routes: Routes = [
   {path: 'editedu/:id',component:EditEducacionComponent},
   {path: 'nuevaexpe', component:NewexperienciaComponent},
   {path: 'editexpe/:id',component:EditExperiencialabComponent},
-  {path: 'editarperfil/:id',component:EditarPotadaAboutComponent}
+  {path: 'editarperfil/:id',component:EditarPotadaAboutComponent},
+  {path: 'newskill',component:NewSkillsComponent},
+  {path: 'editarskills/:id',component:EditSkillsComponent},
+  {path: 'newsworks',component:NewWorksComponent},
+  {path: 'editarworks/:id',component:EditWorksComponent}
 ];
 
 @NgModule({

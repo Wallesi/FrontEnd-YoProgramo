@@ -24,6 +24,10 @@ import { ExperiencialabComponent } from './componentes/experiencialab/experienci
 import { NewexperienciaComponent } from './componentes/experiencialab/new/newexperiencia/newexperiencia.component';
 import { EditExperiencialabComponent } from './componentes/experiencialab/edit/edit-experiencialab/edit-experiencialab.component';
 import { EditarPotadaAboutComponent } from './componentes/portada/edit/editar-potada-about/editar-potada-about.component';
+import { EditSkillsComponent } from './componentes/skills/edit/edit-skills/edit-skills.component';
+import { NewSkillsComponent } from './componentes/skills/new/new-skills/new-skills.component';
+import { NewWorksComponent } from './componentes/works/new/new-works/new-works.component';
+import { EditWorksComponent } from './componentes/works/edit/edit-works/edit-works.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +47,11 @@ import { EditarPotadaAboutComponent } from './componentes/portada/edit/editar-po
     ExperiencialabComponent,
     NewexperienciaComponent,
     EditExperiencialabComponent,
-    EditarPotadaAboutComponent
+    EditarPotadaAboutComponent,
+    EditSkillsComponent,
+    NewSkillsComponent,
+    NewWorksComponent,
+    EditWorksComponent
   ],
   imports: [
     BrowserModule,
