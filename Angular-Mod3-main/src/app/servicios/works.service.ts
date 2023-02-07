@@ -7,7 +7,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class WorksService {
+  //Local
   eduURL='http://localhost:8080/proyectos/'
+  //Deploy
+  //eduURL='https://backendwaldi.onrender.com/proyectos/'
+
+  
 
   constructor(private httpClient:HttpClient) { }
 

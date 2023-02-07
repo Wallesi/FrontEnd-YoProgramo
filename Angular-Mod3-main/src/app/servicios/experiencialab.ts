@@ -7,7 +7,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ExperiencialabService {
-  eduURL='http://localhost:8080/experiencia/'
+  //Local
+  eduURL = 'http://localhost:8080/experiencia/';
+
+  //Render
+  //eduURL='https://backendwaldi.onrender.com/experiencia/';
 
   constructor(private httpClient:HttpClient) { }
 

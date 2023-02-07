@@ -7,7 +7,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SkillsService {
-  eduURL='http://localhost:8080/habilidades/'
+  
+  //Local
+  eduURL = 'http://localhost:8080/habilidades/';
+
+  //Render
+  //eduURL='https://backendwaldi.onrender.com/habilidades/';
 
   constructor(private httpClient:HttpClient) { }
 

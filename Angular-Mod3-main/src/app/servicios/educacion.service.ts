@@ -7,8 +7,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EducacionService {
-  eduURL='http://localhost:8080/educacion/'
+  //Local
+eduURL = 'http://localhost:8080/educacion/';
 
+//Render
+//eduURL='https://backendwaldi.onrender.com/educacion/';
   constructor(private httpClient:HttpClient) { }
 
   public lista(): Observable<Educacion[]> {

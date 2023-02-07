@@ -1,0 +1,38 @@
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.redes a{
+    margin-right: 10px;
+}
+.btn{
+    border-width: medium;
+}
+
+/*--- Para la vista de celular ---*/
+@media (max-width: 575px){
+    .container{
+        flex-direction: column;
+    }
+    .redes{
+        display: flex;
+        flex-direction:row;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .redes img{
+        margin: 0.2em;
+    }
+}
+@media (min-width: 1200px){
+    .logo{
+        margin-left: 30px;
+    }
+    .redes{
+        margin-right:30px;
+    }
+}

@@ -12,6 +12,9 @@ export class SkillsComponent implements OnInit {
   skills:Skills[]=[];
   isLogged=false;
 
+  
+  
+
   constructor(private sSkills:SkillsService,private tokenService:TokenService) { }
 
   ngOnInit(): void {

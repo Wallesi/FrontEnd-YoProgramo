@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Works } from 'src/app/model/works';
 import { WorksService } from 'src/app/servicios/works.service';
 import { Router } from '@angular/router';
+import { ImageService } from 'src/app/servicios/image.service';
 
 @Component({
   selector: 'app-new-works',
@@ -15,7 +16,9 @@ export class NewWorksComponent implements OnInit {
   web:string='';
   git:string='';
 
-  constructor(private sWorks:WorksService,private router:Router) { }
+  constructor(private sWorks:WorksService,
+              private router:Router,
+              ) { }
 
   ngOnInit(): void {
    
@@ -33,7 +36,4 @@ export class NewWorksComponent implements OnInit {
     );
   }
 
-  uploadImage(){
-    
-  }
 }

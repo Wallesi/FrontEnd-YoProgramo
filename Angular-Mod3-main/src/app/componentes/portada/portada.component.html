@@ -5,16 +5,12 @@
         
         
           
-    <img src="./assets/img/header.jpg" class="card-img " style="height:400px; background-repeat: no-repeat; background-size:cover; background-attachment: fixed; background-position: center;" alt="..." >
+    <img src="./assets/img/header.jpg" class="card-img " style="height:350px; background-repeat: no-repeat; background-size:cover; background-attachment: fixed; background-position: center;" alt="..." >
     <div class="card-img-overlay text-center bg-dark bg-opacity-50" >
 
-        <div class="d-flex justify-content-end" style="margin-top: 10px;margin-right:10px">
-            <button type="button" class="btn btn-primary" routerLink="/editarperfil/1" *ngIf="isLogged">
-                <i class="bi bi-pencil-fill"></i>
-            </button>
-          </div>
+        
 
-            <img src="./assets/img/cv-online.png" class="rounded-circle" style="object-fit: cover; object-position: top;height: 200px;width: 200px;" alt="">
+            <img src={{persona.img}} class="rounded-circle" style="object-fit: cover; object-position: top;height: 200px;width: 200px;" alt="">
         <h5 class="card-title">{{persona.nombre}}{{persona.apellido}}</h5>
 
         <p class="card-text">{{persona.titulo}}</p>
@@ -31,8 +27,12 @@
                 </svg>
                
             </a>
+            <button style="margin-left: 10px;" type="button" class="btn btn-primary" routerLink="/editarperfil/1" *ngIf="isLogged">
+                <i class="bi bi-pencil-fill"></i>
+            </button>
             
         </div>
+       
        
     </div>
     <div>

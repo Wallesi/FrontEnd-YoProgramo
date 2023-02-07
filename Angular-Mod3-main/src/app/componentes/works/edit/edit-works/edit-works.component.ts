@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute,Router } from '@angular/router';
 import { Works } from 'src/app/model/works';
+import { ImageService } from 'src/app/servicios/image.service';
 import { WorksService } from 'src/app/servicios/works.service';
 
 @Component({
@@ -14,7 +15,8 @@ export class EditWorksComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private sWorks:WorksService,
-    private router:Router
+    private router:Router,
+    public imageService:ImageService
   ) { }
 
   ngOnInit(): void {
@@ -29,6 +31,7 @@ export class EditWorksComponent implements OnInit {
 
   onUpdate(): void {
     const id=this.activatedRoute.snapshot.params['id'];
+    this.works.img=this.imageService.url;
     this.sWorks.update(id,this.works).subscribe(
       data=>{
         this.router.navigate(['profile']);
@@ -38,7 +41,10 @@ export class EditWorksComponent implements OnInit {
       }
     )
   }
-  uploadImage(){
-    
-  }
+  uploadImage($event: any){
+    const id = this.activatedRoute.snapshot.params['id'];
+    const name = "works_" + id;
+    this.imageService.uploadImage($event, name);
+  } 
+
 }

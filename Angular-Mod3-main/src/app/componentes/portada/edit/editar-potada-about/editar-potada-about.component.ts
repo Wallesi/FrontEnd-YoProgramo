@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute,Router } from '@angular/router';
 import { persona } from 'src/app/model/persona.model';
+import { ImageService } from 'src/app/servicios/image.service';
 import { PersonaService } from 'src/app/servicios/persona.service';
 
 @Component({
@@ -14,7 +15,8 @@ export class EditarPotadaAboutComponent implements OnInit {
   constructor(
     private sPersona:PersonaService,
     private activatedRoute: ActivatedRoute,
-    private router:Router
+    private router:Router,
+    public imageService: ImageService
   ) { }
 
   ngOnInit(): void {
@@ -29,6 +31,7 @@ export class EditarPotadaAboutComponent implements OnInit {
   
   onUpdate():void{
     const id=this.activatedRoute.snapshot.params['id'];
+    this.persona.img=this.imageService.url;
     this.sPersona.update(id,this.persona).subscribe(data=>{
       this.router.navigate(['profile']);
     },err=>{
@@ -36,9 +39,14 @@ export class EditarPotadaAboutComponent implements OnInit {
       this.router.navigate(['profile']);
     })
   }
-  uploadImage(){
-    
-  }
+
+  //Imagen perfil revisar
+
+  uploadImage($event: any){
+    const id = this.activatedRoute.snapshot.params['id'];
+    const name = "perfil_" + id;
+    this.imageService.uploadImage($event, name);
+  } 
 
 
 }

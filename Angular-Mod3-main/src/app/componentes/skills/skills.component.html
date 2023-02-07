@@ -2,24 +2,24 @@
 <div class="card" style="margin-top: 20px;">
 
 
-<h3 class="card-title text-center"style="margin-top: 40px;" id="lenguajes">Habilidades</h3>
+<h3 class="card-title text-center"style="margin-top: 40px;" id="lenguajes">Lenguajes y Habilidades</h3>
 
 <div class="col-lg-2" style="margin-left: 15px;margin-bottom: 5px;">
-  <button type="button" class="btn btn-primary" routerLink="/newskill" *ngIf="isLogged">
+  <button type="button" class="btn btn-success" routerLink="/newskill" *ngIf="isLogged">
       Agregar habilidades
   </button>
 </div>
 
 <div class="row" style="margin-top: 5px;" style="margin-left: 10px;margin-right:10px;margin-bottom: 15px;">
-  <div class="text-center col-sm-4 col-md-4 col-lg-4" *ngFor="let Skills of skills">
-    
-    
-      <img src="./assets/img/icons8-c++-100.png" style="height: 100px;width:100px;margin: auto;margin-top:20px;margin-bottom:20px"  alt="...">
+  <div class="col-sm-4 col-md-4 col-lg-4" *ngFor="let Skills of skills">
+      
       <div class="card-body">
-        <h5 class="card-title">{{Skills.name}}</h5>
-        <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-          <div class="progress-bar progress-bar-striped progress-bar-animated" [style]="Skills.progreso">{{Skills.progreso}}</div>
+        <h5 class="card-title"><i class="fa-solid fa-code" style="margin-right: 5px;"></i>{{Skills.name}}</h5>
+        
+        <div style="height:20px;" class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar bg-success" [ngStyle]="{'width.%':Skills.progreso}"></div>
         </div>
+        
       </div>
 
       <div class="text-center" style="margin-bottom: 15px;">

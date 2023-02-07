@@ -10,14 +10,7 @@
                     <label for="institucionE">Apellido</label>
                     <input type="text" class="form-control" id="apellido" name="apellido"  [(ngModel)]="persona.apellido" required>
                 </div>
-                <div class="form-group">
-                    <label for="finalE">Imagen perfil</label>
-                    <input type="file" class="form-control" id="img" name="img"  [(ngModel)]="persona.img" (change)="uploadImage()" accept=".png .jpg .jpeg">
-                </div>
-                <div class="form-group">
-                    <label for="tituloE">Banner</label>
-                    <input type="file" class="form-control" id="banner" name="banner"  [(ngModel)]="persona.banner" (change)="uploadImage()" accept=".png .jpg .jpeg">
-                </div>
+
                 <div class="form-group">
                     <label for="inicioE">Curriculum</label>
                     <input type="text" class="form-control" id="cv" name="cv"  [(ngModel)]="persona.cv" required>
@@ -38,7 +31,17 @@
                     <label for="finalE">Ubicacion</label>
                     <input type="text" class="form-control" id="ubicacion" name="ubicacion"  [(ngModel)]="persona.ubicacion" required>
                 </div>
-                <button class="btn btn-success">
+
+                <div class="form-group">
+                    <label for="finalE">Imagen perfil</label>
+                    <input type="file" class="form-control" id="img" name="img"  [(ngModel)]="persona.img" (change)="uploadImage($event)" accept=".png .jpg .jpeg">
+                </div>
+                
+                <div class="imagen" style="margin:15px 0px 10px 0px">
+                    <img [src]="imageService.url" width="30%" height="30%">
+                </div>
+                
+                <button class="btn btn-success" style="margin-bottom: 20px;">
                     Guardar
                 </button>
             </form>

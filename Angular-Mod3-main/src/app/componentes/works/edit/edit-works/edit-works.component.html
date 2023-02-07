@@ -4,8 +4,13 @@
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" action="">
                 <div class="form-group">
                     <label for="institucionE">Imagen Proyecto</label>
-                    <input type="file" class="form-control" id="img" name="img" [(ngModel)]="works.img" required (change)="uploadImage()" accept=".png .jpg .jpeg">
+                    <input type="file" class="form-control" id="img" name="img" [(ngModel)]="works.img" required (change)="uploadImage($event)" accept=".png .jpg .jpeg">
                 </div>
+
+                <div class="imagen" style="margin:15px 0px 10px 0px">
+                    <img [src]="imageService.url" width="30%" height="30%">
+                </div>
+
                 <div class="form-group">
                     <label for="tituloE">Titulo</label>
                     <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="works.titulo" required>

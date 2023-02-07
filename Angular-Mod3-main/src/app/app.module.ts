@@ -28,6 +28,9 @@ import { EditSkillsComponent } from './componentes/skills/edit/edit-skills/edit-
 import { NewSkillsComponent } from './componentes/skills/new/new-skills/new-skills.component';
 import { NewWorksComponent } from './componentes/works/new/new-works/new-works.component';
 import { EditWorksComponent } from './componentes/works/edit/edit-works/edit-works.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -58,7 +61,9 @@ import { EditWorksComponent } from './componentes/works/edit/edit-works/edit-wor
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
   ],
   providers: [interceptorProvider],
   bootstrap: [AppComponent]
