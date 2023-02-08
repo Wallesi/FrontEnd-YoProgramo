@@ -8,9 +8,9 @@ import { Observable } from 'rxjs';
 })
 export class WorksService {
   //Local
-  eduURL='http://localhost:8080/proyectos/'
+  //eduURL='http://localhost:8080/proyectos/'
   //Deploy
-  //eduURL='https://backendwaldi.onrender.com/proyectos/'
+  eduURL='https://backendwaldi.onrender.com/proyectos/'
 
   
 

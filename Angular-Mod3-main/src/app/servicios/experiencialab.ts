@@ -8,10 +8,10 @@ import { Observable } from 'rxjs';
 })
 export class ExperiencialabService {
   //Local
-  eduURL = 'http://localhost:8080/experiencia/';
+  //eduURL = 'http://localhost:8080/experiencia/';
 
   //Render
-  //eduURL='https://backendwaldi.onrender.com/experiencia/';
+  eduURL='https://backendwaldi.onrender.com/experiencia/';
 
   constructor(private httpClient:HttpClient) { }
 

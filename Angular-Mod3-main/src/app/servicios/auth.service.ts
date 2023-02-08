@@ -11,10 +11,10 @@ import { LoginUsuario } from '../model/login-usuario';
 export class AuthService {
 
 //Local
-authURL = 'http://localhost:8080/auth/';
+//authURL = 'http://localhost:8080/auth/';
 
 //Render
-//authURL='https://backendwaldi.onrender.com/auth/';
+authURL='https://backendwaldi.onrender.com/auth/';
 
   constructor(private httpCLient:HttpClient) { }
 

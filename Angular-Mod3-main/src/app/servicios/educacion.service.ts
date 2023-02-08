@@ -8,10 +8,10 @@ import { Observable } from 'rxjs';
 })
 export class EducacionService {
   //Local
-eduURL = 'http://localhost:8080/educacion/';
+//eduURL = 'http://localhost:8080/educacion/';
 
 //Render
-//eduURL='https://backendwaldi.onrender.com/educacion/';
+eduURL='https://backendwaldi.onrender.com/educacion/';
   constructor(private httpClient:HttpClient) { }
 
   public lista(): Observable<Educacion[]> {

@@ -10,10 +10,10 @@ import { persona } from '../model/persona.model';
 })
 export class PersonaService {
   //Local
-  URL = 'http://localhost:8080/persona/';
+  //URL = 'http://localhost:8080/persona/';
 
   //Render
-  //URL='https://backendwaldi.onrender.com/persona/';
+  URL='https://backendwaldi.onrender.com/persona/';
 
   constructor(private httpClient: HttpClient) { }
 

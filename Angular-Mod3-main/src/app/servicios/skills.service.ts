@@ -9,10 +9,10 @@ import { Observable } from 'rxjs';
 export class SkillsService {
   
   //Local
-  eduURL = 'http://localhost:8080/habilidades/';
+  //eduURL = 'http://localhost:8080/habilidades/';
 
   //Render
-  //eduURL='https://backendwaldi.onrender.com/habilidades/';
+  eduURL='https://backendwaldi.onrender.com/habilidades/';
 
   constructor(private httpClient:HttpClient) { }
 
