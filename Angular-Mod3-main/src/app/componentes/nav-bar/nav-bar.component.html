@@ -1,26 +1,26 @@
-<header>
-<div style="background-color: black;">
-<div class="container-xl">
-<div class="row">
-  <div class="container">
-      <div class="logo" style="margin-left: 0px;">
-        <img src="./assets/img/aplogo.png" style="height: 30px;width:100px" alt="">
-      </div>
-      <div class="redes" style="margin-right: -5px;">
-        <a class="btn btn-secondary"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/waldemar-galizzi/" class="btn btn-secondary" target="_blank"><i class="bi bi-linkedin"></i></a>
-        <a href="https://github.com/Wallesi" class="btn btn-secondary" target="_blank"><i class="bi bi-github"></i></a>
-          
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" *ngIf="!isLogged">
-            Login
-          </button><app-login> </app-login>
+<header style="margin-bottom: 20px;">
+  <div style="background-color: black;">
+  <div class="container-xl">
+  <div class="row">
+    <div class="container">
+        <div class="logo" style="margin-left: 0px;">
+          <img src="./assets/img/aplogo.png" style="height: 30px;width:100px" alt="">
+        </div>
+        <div class="redes" style="margin-right: -5px;">
+          <a class="btn btn-secondary"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/waldemar-galizzi/" class="btn btn-secondary" target="_blank"><i class="bi bi-linkedin"></i></a>
+          <a href="https://github.com/Wallesi" class="btn btn-secondary" target="_blank"><i class="bi bi-github"></i></a>
+            
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" *ngIf="!isLogged">
+              Login
+            </button><app-login> </app-login>
 
-          <button type="button" class="btn btn-danger" (click)="onLogOut()" *ngIf="isLogged">
-           Logout
-         </button><app-login> </app-login>
-      </div>
+            <button type="button" class="btn btn-danger" (click)="onLogOut()" *ngIf="isLogged">
+            Logout
+          </button><app-login> </app-login>
+        </div>
+    </div>
   </div>
-</div>
-</div>
-</div>
+  </div>
+  </div>
 </header>

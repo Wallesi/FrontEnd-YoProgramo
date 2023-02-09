@@ -1,3 +1,5 @@
+<app-nav-bar></app-nav-bar>
+
 <div class="container">
     <div class="row">
         <div>
@@ -18,10 +20,12 @@
                     <label for="finalE">Fecha finalizacion</label>
                     <input type="text" class="form-control" id="finalE" name="finalE" [(ngModel)]="finalE" required>
                 </div>
-                <button class="btn btn-success">
+                <button class="btn btn-success" style="margin-top: 30px;margin-bottom: 30px;">
                     Agregar
                 </button>
             </form>
         </div>
     </div>
 </div>
+
+<app-footer style="position:absolute;bottom:0;width: 100%;"></app-footer>

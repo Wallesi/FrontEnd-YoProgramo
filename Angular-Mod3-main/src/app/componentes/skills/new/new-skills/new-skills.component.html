@@ -1,12 +1,10 @@
+<app-nav-bar></app-nav-bar>
 <div class="container">
     <div class="row">
         <div>
             <form (ngSubmit)="onCreate()" novalidate #f="ngForm" action="">
 
-                <div class="form-group">
-                    <label for="tituloE">HTML ICONO</label>
-                    <input type="text" class="form-control" id="img" name="img" [(ngModel)]="img" required>
-                </div>
+                
                 <div class="form-group">
                     <label for="tituloE">Nombre habilidad</label>
                     <input type="text" class="form-control" id="name" name="name" [(ngModel)]="name" required>
@@ -15,10 +13,11 @@
                     <label for="inicioE">Progreso</label>
                     <input type="text" class="form-control" id="progreso" name="progreso" [(ngModel)]="progreso" required>
                 </div>
-                <button class="btn btn-success">
+                <button class="btn btn-success" style="margin-top: 30px;margin-bottom: 30px;">
                     Agregar
                 </button>
             </form>
         </div>
     </div>
 </div>
+<app-footer style="position:absolute;bottom:0;width: 100%;"></app-footer>

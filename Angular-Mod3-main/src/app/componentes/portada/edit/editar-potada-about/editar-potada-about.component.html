@@ -1,3 +1,4 @@
+<app-nav-bar></app-nav-bar>
 <div class="container" *ngIf="persona">
     <div class="row">
         <div>
@@ -38,13 +39,16 @@
                 </div>
                 
                 <div class="imagen" style="margin:15px 0px 10px 0px">
-                    <img [src]="imageService.url" width="30%" height="30%">
+                    <img [src]="imageService.url" width="20%" height="20%">
                 </div>
                 
-                <button class="btn btn-success" style="margin-bottom: 20px;">
+                <button class="btn btn-success" style="margin-top: 30px;margin-bottom: 30px;">
                     Guardar
                 </button>
             </form>
         </div>
     </div>
+
 </div> 
+
+<app-footer style="position:absolute;bottom:0;width: 100%;margin-top: 30px;"></app-footer>
