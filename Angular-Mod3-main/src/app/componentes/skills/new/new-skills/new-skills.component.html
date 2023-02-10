@@ -13,9 +13,14 @@
                     <label for="inicioE">Progreso</label>
                     <input type="text" class="form-control" id="progreso" name="progreso" [(ngModel)]="progreso" required>
                 </div>
-                <button class="btn btn-success" style="margin-top: 30px;margin-bottom: 30px;">
-                    Agregar
-                </button>
+                <div>
+                    <button class="btn btn-success" style="margin-top: 30px;margin-bottom: 30px;margin-right:20px ;">
+                        Guardar
+                    </button>
+                    <button class="btn btn-secondary" style="margin-top: 30px;margin-bottom: 30px;" routerLink="/profile">
+                        Regresar a perfil
+                    </button>
+                    </div>
             </form>
         </div>
     </div>

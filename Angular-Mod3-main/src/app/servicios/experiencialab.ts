@@ -11,27 +11,27 @@ export class ExperiencialabService {
   //eduURL = 'http://localhost:8080/experiencia/';
 
   //Render
-  eduURL='https://backendwaldi.onrender.com/experiencia/';
+  expeURL='https://backendwaldi.onrender.com/experiencia/';
 
   constructor(private httpClient:HttpClient) { }
 
   public lista(): Observable<Experiencialab[]> {
-    return this.httpClient.get<Experiencialab[]>(this.eduURL + 'lista');
+    return this.httpClient.get<Experiencialab[]>(this.expeURL + 'lista');
   }
 
   public detail(id:number): Observable<Experiencialab>{
-    return this.httpClient.get<Experiencialab>(this.eduURL + `detail/${id}`);
+    return this.httpClient.get<Experiencialab>(this.expeURL + `detail/${id}`);
   }
 
   public save(experiencialab: Experiencialab): Observable<any>{
-    return this.httpClient.post<any>(this.eduURL + 'create',experiencialab);
+    return this.httpClient.post<any>(this.expeURL + 'create',experiencialab);
   }
 
   public update(id:number,experiencialab:Experiencialab): Observable<any>{
-    return this.httpClient.put<any>(this.eduURL + `update/${id}`, experiencialab);
+    return this.httpClient.put<any>(this.expeURL + `update/${id}`, experiencialab);
   }
 
   public delete(id:number): Observable<any>{
-    return this.httpClient.delete<any>(this.eduURL + `delete/${id}`);
+    return this.httpClient.delete<any>(this.expeURL + `delete/${id}`);
   }
 }
