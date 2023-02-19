@@ -3,6 +3,7 @@ import { ActivatedRoute,Router } from '@angular/router';
 import { persona } from 'src/app/model/persona.model';
 import { ImageService } from 'src/app/servicios/image.service';
 import { PersonaService } from 'src/app/servicios/persona.service';
+import { TokenService } from 'src/app/servicios/token.service';
 
 @Component({
   selector: 'app-editar-potada-about',
@@ -11,15 +12,23 @@ import { PersonaService } from 'src/app/servicios/persona.service';
 })
 export class EditarPotadaAboutComponent implements OnInit {
   persona:persona=null;
+  isLogged=false;
 
   constructor(
     private sPersona:PersonaService,
     private activatedRoute: ActivatedRoute,
     private router:Router,
-    public imageService: ImageService
+    public imageService: ImageService,
+    private tokenService:TokenService
   ) { }
 
   ngOnInit(): void {
+    if(this.tokenService.getToken()){
+      this.isLogged=true;
+    }else{
+      this.isLogged=false;
+    }
+
     const id=this.activatedRoute.snapshot.params['id'];
     this.sPersona.detail(id).subscribe(data=>{
       this.persona=data;

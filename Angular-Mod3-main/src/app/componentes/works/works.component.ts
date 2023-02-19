@@ -29,6 +29,7 @@ export class WorksComponent implements OnInit {
   }
   delete(id:number){
     if(id != undefined){
+      
       this.sWorks.delete(id).subscribe(
         data => {
           this.cargarWorks();

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Experiencialab } from 'src/app/model/experiencialab';
 import { ExperiencialabService } from 'src/app/servicios/experiencialab';
+import { TokenService } from 'src/app/servicios/token.service';
 @Component({
   selector: 'app-newexperiencia',
   templateUrl: './newexperiencia.component.html',
@@ -14,9 +15,18 @@ export class NewexperienciaComponent implements OnInit {
   finalizo:string = '';
   tareas:string = '';
 
-  constructor(private sExperiencialab:ExperiencialabService,private router:Router) { }
+  isLogged=false;
+
+  constructor(private sExperiencialab:ExperiencialabService,
+    private router:Router,
+    private tokenService: TokenService) { }
 
   ngOnInit(): void {
+    if(this.tokenService.getToken()){
+      this.isLogged=true;
+    }else{
+      this.isLogged=false;
+    }
   }
 
   onCreate():void{

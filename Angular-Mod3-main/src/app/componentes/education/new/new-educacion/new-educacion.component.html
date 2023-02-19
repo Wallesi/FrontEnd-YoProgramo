@@ -1,15 +1,15 @@
 <app-nav-bar></app-nav-bar>
-
-<div class="container">
+<h1 *ngIf="!isLogged" class="container">ACCESO DENEGADO</h1>
+<div class="container" *ngIf="isLogged">
     <div class="row">
         <div>
             <form (ngSubmit)="onCreate()" novalidate #f="ngForm" action="">
                 <div class="form-group">
-                    <label for="institucionE">Nombre institucion</label>
+                    <label for="institucionE">Nombre institución</label>
                     <input type="text" class="form-control" id="institucionE" name="institucionE" [(ngModel)]="institucionE" required>
                 </div>
                 <div class="form-group">
-                    <label for="tituloE">Nombre titulo</label>
+                    <label for="tituloE">Nombre título</label>
                     <input type="text" class="form-control" id="tituloE" name="tituloE" [(ngModel)]="tituloE" required>
                 </div>
                 <div class="form-group">
@@ -17,7 +17,7 @@
                     <input type="text" class="form-control" id="inicioE" name="inicioE" [(ngModel)]="inicioE" required>
                 </div>
                 <div class="form-group">
-                    <label for="finalE">Fecha finalizacion</label>
+                    <label for="finalE">Fecha finalización</label>
                     <input type="text" class="form-control" id="finalE" name="finalE" [(ngModel)]="finalE" required>
                 </div>
                 <div>

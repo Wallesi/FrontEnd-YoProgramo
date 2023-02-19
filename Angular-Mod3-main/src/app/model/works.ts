@@ -1,14 +1,14 @@
 export class Works {
     id?: number;
-    img:string;
+    fechas:string;
     titulo:string;
     descripcion:string;
     web:string;
     git:string;
     
 
-    constructor(img:string,titulo:string,descripcion:string,web:string,git:string) {
-        this.img = img;
+    constructor(fechas:string,titulo:string,descripcion:string,web:string,git:string) {
+        this.fechas = fechas;
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.web = web;

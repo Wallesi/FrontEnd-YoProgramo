@@ -1,12 +1,10 @@
 export class Skills {
     id?: number;
-    img:string;
     name:string;
     progreso:string;
     
 
-    constructor(img:string, name:string, progreso:string) {
-        this.img = img;
+    constructor(name:string, progreso:string) {
         this.name = name;
         this.progreso = progreso;
     }   

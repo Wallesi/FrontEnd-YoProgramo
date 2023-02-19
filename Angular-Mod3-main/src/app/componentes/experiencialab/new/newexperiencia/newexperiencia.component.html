@@ -1,5 +1,6 @@
 <app-nav-bar></app-nav-bar>
-<div class="container">
+<h1 *ngIf="!isLogged" class="container">ACCESO DENEGADO</h1>
+<div class="container" *ngIf="isLogged">
     <div class="row">
         <div>
             <form (ngSubmit)="onCreate()" novalidate #f="ngForm" action="">
@@ -16,7 +17,7 @@
                     <input type="text" class="form-control" id="inicioE" name="comienzo" [(ngModel)]="comienzo" required>
                 </div>
                 <div class="form-group">
-                    <label for="finalE">Fecha finalizacion</label>
+                    <label for="finalE">Fecha finalización</label>
                     <input type="text" class="form-control" id="finalizo" name="finalizo" [(ngModel)]="finalizo" required>
                 </div>
                 <div class="form-group">

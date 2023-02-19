@@ -1,5 +1,6 @@
 <app-nav-bar></app-nav-bar>
-<div class="container">
+<h1 *ngIf="!isLogged" class="container">ACCESO DENEGADO</h1>
+<div class="container" *ngIf="isLogged">
     <div class="row">
         <div>
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" action="">
